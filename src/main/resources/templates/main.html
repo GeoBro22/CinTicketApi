@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Список фильмов</title>
+</head>
+<body>
+<div>привет</div>
+<div th:each="movie : ${movies}">
+    <div>
+        <b th:text="${movie.id}"></b>
+        <span th:text="${movie.nameRu}"></span>
+        <span th:text="${movie.description}"></span>
+    </div>
+</div>
+</body>
+</html>
