@@ -24,7 +24,4 @@ public class CinemaEntity {
     String openingTime;
     String closingTime;
     String bankAccount;
-//    @OneToMany
-//    List<SessionEntity> sessions;
-
 }

@@ -1,23 +1,19 @@
 package org.example.cinticket.api.controllers;
 
-import jakarta.persistence.PostUpdate;
 import jakarta.transaction.Transactional;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.example.cinticket.api.dto.PlaceDto;
-import org.example.cinticket.api.dto.SessionDto;
 import org.example.cinticket.api.factories.PlaceDtoFactory;
-import org.example.cinticket.api.factories.SessionDtoFactory;
-import org.example.cinticket.domain.entities.HallEntity;
 import org.example.cinticket.domain.entities.PlaceEntity;
-import org.example.cinticket.domain.entities.SessionEntity;
 import org.example.cinticket.domain.repository.PlaceRepository;
-import org.example.cinticket.domain.repository.SessionRepository;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Optional;
 
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
@@ -44,7 +40,6 @@ public class PlaceController {
                 .rowNumber(place.getRowNumber())
                 .position(place.getPosition())
                 .hall(place.getHall())
-                .isAvailable(false)
                 .build());
         return placeRepository.findAll();
     }

@@ -19,7 +19,6 @@ public class PlaceEntity {
     Integer rowNumber;
     Integer seatNumber;
     Integer position;
-    Boolean isAvailable;
     @ManyToOne
     HallEntity hall;
 }

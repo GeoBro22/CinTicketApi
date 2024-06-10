@@ -18,7 +18,6 @@ public class PlaceDtoFactory {
                 .position(placeEntity.getPosition())
                 .rowNumber(placeEntity.getRowNumber())
                 .seatNumber(placeEntity.getSeatNumber())
-                .isAvailable(placeEntity.getIsAvailable())
                 .hall(placeEntity.getHall())
                 .build();
     }
